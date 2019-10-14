@@ -1,3 +1,13 @@
+# My COMMENTS
+### Swarm Node setup: 
+
+```docker run -v /tmp/hostdata:/data -d --rm -e DATADIR=/data -e PASSWORD=password123 -p 8501:8500/tcp -it --name swarm1 ethdevops/swarm --httpaddr=0.0.0.0 --debug --verbosity 4 --datadir /data```
+
+```curl -X POST -H "Content-Type: text/plain" --data "some-data" http://52.8.30.100:8501/bzz:/```
+
+
+### upload a file:
+```curl -H "Content-Type: text/html" --data-binary @website/ICO_only.html http://52.8.30.100:8501/bzz:/ ```
 # Official Swarm Docker image
 
 [![Build Status](https://travis-ci.org/ethersphere/swarm-docker.svg?branch=master)](https://travis-ci.org/ethersphere/swarm-docker)
